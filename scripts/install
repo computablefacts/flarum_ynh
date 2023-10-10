@@ -83,7 +83,7 @@ ynh_exec_warn_less ynh_composer_exec --phpversion=$phpversion --workdir=$install
 ynh_exec_warn_less ynh_composer_exec --phpversion=$phpversion --workdir=$install_dir --commands="require askvortsov/flarum-saml --no-update"
 
 # Require private discussions extension
-ynh_exec_warn_less ynh_composer_exec --phpversion=$phpversion --workdir=$install_dir --commands="require fof/byobu:\"*\" --no-update"
+ynh_exec_warn_less ynh_composer_exec --phpversion=$phpversion --workdir=$install_dir --commands="require fof/byobu --no-update"
 
 # Update and download dependencies
 ynh_exec_warn_less ynh_composer_exec --phpversion=$phpversion --workdir=$install_dir --commands="update"

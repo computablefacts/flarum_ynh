@@ -6,9 +6,9 @@ description.en = "Next-generation forum made simple"
 description.fr = "Forum de nouvelle génération, simplement"
 description.de = "Forum der nächsten Generation leicht gemacht"
 
-version = "1.8.2~ynh1"
+version = "1.8.2~ynh2"
 
-maintainers = ["tituspijean"]
+maintainers = ["pbrisacier@mncc.fr"]
 
 [upstream]
 license = "MIT"
