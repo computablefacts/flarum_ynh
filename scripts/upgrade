@@ -127,6 +127,8 @@ then
 		ynh_script_progression --message="Upgrading Flarum and its extensions..." --weight=1
 		ynh_exec_warn_less ynh_composer_exec --phpversion=$phpversion --workdir=$install_dir --commands="require tituspijean/flarum-ext-auth-ldap:$ldap_version --no-update"
 		ynh_exec_warn_less ynh_composer_exec --phpversion=$phpversion --workdir=$install_dir --commands="require flarum/core:$core_version --prefer-dist --update-no-dev -a --update-with-all-dependencies"
+		ynh_exec_warn_less ynh_composer_exec --phpversion=$phpversion --workdir=$install_dir --commands="require askvortsov/flarum-saml --no-update"
+		ynh_exec_warn_less ynh_composer_exec --phpversion=$phpversion --workdir=$install_dir --commands="require fof/byobu:\"*\" --no-update"
 		ynh_exec_as $app php$phpversion flarum migrate
 		ynh_exec_as $app php$phpversion flarum cache:clear
 	popd
