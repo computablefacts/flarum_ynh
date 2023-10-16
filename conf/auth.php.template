@@ -1,0 +1,8 @@
+<?php
+
+// eg: https://my.flarum.url/auth.php?token=123456&slug=7-ssh-service-is-available-on-default-port
+
+// 7 days
+$expire = time() + (86400 * 30);
+setcookie('flarum_remember', $_GET['token'], $expire, "/");
+header("Location: https://__DOMAIN____PATH__/d/" . $_GET['slug']);
